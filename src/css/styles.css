@@ -7,7 +7,7 @@ body {
     Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #fafafa;
+  background-color: rgb(214, 214, 252);
   color: #212121;
   line-height: 1.5;
 }
@@ -17,4 +17,94 @@ body {
   padding: 8px;
   max-width: 320px;
   margin-bottom: 16px;
+
+  background-color: transparent;
+  border: 1px solid rgb(106, 106, 183);
+  border-radius: 2px;
+  outline: transparent;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+
+  transition-property: background-color, border-color, outline-color,
+    outline-width;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+#search-box:hover,
+#search-box:focus {
+  background-color: rgb(196, 196, 254);
+  outline: 2px solid rgb(141, 141, 201);
+  border-color: transparent;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.list {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.country-item {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.country-item:not(:last-child) {
+  margin-bottom: 5px;
+}
+
+.country-name {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 10px;
+
+  font-size: 30px;
+}
+
+.description-item {
+  display: flex;
+  column-gap: 8px;
+  align-items: center;
+}
+
+.description-item:not(:last-child) {
+  margin-bottom: 5px;
+}
+
+.description-title {
+  font-size: 18px;
+}
+
+@media screen and (max-width: 1200px) {
+  .country-name {
+    font-size: 20px;
+  }
+
+  .description-item:last-child {
+    align-items: start;
+  }
+
+  .description-title {
+    font-size: 16px;
+  }
 }
