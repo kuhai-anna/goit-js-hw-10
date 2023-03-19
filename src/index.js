@@ -6,7 +6,7 @@ import { fetchCountries } from './js/fetchCountries';
 const DEBOUNCE_DELAY = 300;
 
 // Налаштування сповіщень
-const notiflixOptions = {
+export const notiflixOptions = {
   width: '330px',
   fontSize: '16px',
   position: 'right-top',
