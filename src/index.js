@@ -65,6 +65,9 @@ function createCountryItemTpl(array) {
 
 // Створення карточки країни
 function createCountryCardTpl(array) {
+  // const createLanguageList = Object.values(languages).map(language=>`<li class="language-item">${language}</li>`).join('');
+  // + в cardMarkup додати <ul class="language-list">${createLanguageList}</ul>
+
   const cardMarkup = array
     .map(
       ({ name, capital, population, flags, languages }) =>
